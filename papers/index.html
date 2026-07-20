@@ -1,0 +1,40 @@
+---
+layout: default
+title: Publications
+---
+
+<div class="row justify-content-center">
+  <div class="col-12 col-md-11 col-lg-10 col-xl-9">
+    {% assign current_year = "" %}
+    {% for post in site.posts %}
+      {% if post.year != current_year %}
+        {% assign current_year = post.year %}
+        <div class="row mb-1 mt-2">
+          <div class="col-auto" style="flex: 0 0 auto; width: 80px;">
+            <h4 class="text-muted mb-0">{{ current_year }}</h4>
+          </div>
+          <div class="col">
+            <hr class="mt-2 mb-0">
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="mb-2">
+        <div class="row gx-3 align-items-start">
+          <div class="col-auto" style="flex: 0 0 auto; width: 80px;">
+            <!-- Empty space for year margin -->
+          </div>
+          <div class="col-auto" style="flex: 0 0 auto; width: 100px;">
+            {% if post.image %}
+            <img src="{{ post.image }}" class="img-fluid rounded" alt="{{ post.title }}" style="max-width: 80px;">
+            {% endif %}
+          </div>
+          <div class="col">
+            <h6 class="mb-1"><a href="{{ post.url | relative_url }}" class="paper-title-link">{{ post.title }}</a></h6>
+            <p class="mb-1 text-muted">{{ post.ref }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,61 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+
+{% assign me = site.team | first %}
+
+<div class="row justify-content-center">
+  <div class="col-12 col-md-11 col-lg-10 col-xl-9">
+    <div class="row gx-4 align-items-start mb-4">
+      <div class="col-auto" style="max-width: 250px;">
+        {% if me.photo %}
+        <img src="{{ me.photo }}" class="img-fluid rounded mb-3" alt="{{ me.name }}" style="max-width: 200px;">
+        {% endif %}
+
+        <div class="profile-links">
+          {% if me.email %}
+          <p class="mb-1">
+            <a href="mailto:{{ me.email }}">
+              <img src="/images/logos/email.svg" alt="Email" style="height: 18px; width: 18px; margin-right: 8px; vertical-align: text-bottom;">
+              Email
+            </a>
+          </p>
+          {% endif %}
+          {% if me.google_scholar %}
+          <p class="mb-1">
+            <a href="{{ me.google_scholar }}" target="_blank">
+              <img src="/images/logos/google-scholar.svg" alt="Google Scholar" style="height: 18px; width: 18px; margin-right: 8px; vertical-align: text-bottom;">
+              Google Scholar
+            </a>
+          </p>
+          {% endif %}
+          {% if me.orcid %}
+          <p class="mb-1">
+            <a href="{{ me.orcid }}" target="_blank">
+              <img src="/images/logos/orcid.svg" alt="ORCID" style="height: 18px; width: 18px; margin-right: 8px; vertical-align: text-bottom;">
+              ORCID
+            </a>
+          </p>
+          {% endif %}
+          {% if me.github %}
+          <p class="mb-1">
+            <a href="{{ me.github }}" target="_blank">
+              <img src="/images/logos/github.svg" alt="GitHub" style="height: 18px; width: 18px; margin-right: 8px; vertical-align: text-bottom;">
+              GitHub
+            </a>
+          </p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="col">
+        <h1 class="mb-4">{{ me.name }}</h1>
+        <div class="bio-content">
+          {{ me.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

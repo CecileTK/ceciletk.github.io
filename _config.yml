@@ -1,0 +1,38 @@
+# Site settings
+title: "Cécile TRAN KIEM"
+author: "Cécile Tran Kiem"
+email: ctrankie@fredhutch.org
+description: ""
+
+# URL settings
+url: "https://ceciletk.github.io"  # Replace with your GitHub username
+baseurl: ""  # Leave empty if using yourusername.github.io repo, or "/repo-name" for project repos
+
+# Build settings
+markdown: kramdown
+permalink: /papers/:title/
+future: true  # Show posts with future dates
+
+# Collections
+collections:
+  team:
+    output: true
+    permalink: /team/:name/
+  home:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team_member"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - about.html

@@ -1,0 +1,89 @@
+/* Custom styles for academic website */
+
+/* Color variables */
+:root {
+  --color-primary: #212529;     /* Black - main text and links */
+  --color-secondary: #6c757d;   /* Grey - muted text and borders */
+  --color-accent: #FF7217;      /* Orange - hover states and active elements */
+  --color-white: #ffffff;       /* White - backgrounds */
+}
+
+/* Global link color override */
+a {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--color-accent) !important;
+  text-decoration: none !important;
+}
+
+/* Navigation active link */
+.nav-link.active {
+  color: var(--color-accent) !important;
+}
+
+/* Paper title links */
+.paper-title-link {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+}
+
+.paper-title-link:hover {
+  color: var(--color-accent) !important;
+  text-decoration: none !important;
+}
+
+/* All links in paper details (PDF, Supplement, DOI, Code) */
+.paper-links a {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+  font-size: 1rem;
+}
+
+.paper-links a:hover {
+  color: var(--color-accent) !important;
+  text-decoration: none !important;
+}
+
+/* Ensure images don't overlap with text */
+.paper-image-col {
+  flex-shrink: 0; /* Prevent image column from shrinking */
+  min-width: 120px; /* Minimum width for image column */
+  margin-right: 20px; /* Minimum margin between image and text */
+}
+
+.paper-content-col {
+  flex-grow: 1; /* Allow text column to grow */
+  min-width: 0; /* Allow text to wrap properly */
+}
+
+/* Button hover effect */
+.btn-outline-secondary:hover {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-white) !important;
+}
+
+/* Homepage profile links */
+.profile-links a {
+  color: var(--color-primary) !important;
+  text-decoration: none !important;
+}
+
+.profile-links a:hover {
+  color: var(--color-accent) !important;
+  text-decoration: none !important;
+}
+
+/* Links in bio content (but not buttons) */
+.bio-content a:not(.btn) {
+  color: var(--color-primary) !important;
+  text-decoration: underline !important;
+}
+
+.bio-content a:not(.btn):hover {
+  color: var(--color-accent) !important;
+  text-decoration: underline !important;
+}

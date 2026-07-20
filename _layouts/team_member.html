@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+
+    <div class="row mb-4 gx-4 align-items-start">
+      <div class="col-auto">
+        {% if page.photo %}
+        <img src="{{ page.photo }}" class="rounded" alt="{{ page.name }}" style="width: 200px; height: 200px; object-fit: cover;">
+        {% endif %}
+      </div>
+      <div class="col">
+        <h2 class="mb-2">{{ page.name }}</h2>
+        <p class="lead text-muted mb-3">{{ page.position }}</p>
+
+        <p class="mb-3 profile-links">
+          {% if page.email %}
+          <a href="mailto:{{ page.email }}" class="me-3">✉ Email</a>
+          {% endif %}
+          {% if page.google_scholar %}
+          <a href="{{ page.google_scholar }}" target="_blank" class="me-3">🎓 Google Scholar</a>
+          {% endif %}
+          {% if page.orcid %}
+          <a href="{{ page.orcid }}" target="_blank" class="me-3">🔗 ORCID</a>
+          {% endif %}
+          {% if page.github %}
+          <a href="{{ page.github }}" target="_blank" class="me-3">💻 GitHub</a>
+          {% endif %}
+        </p>
+
+        {% if page.interests %}
+        <p class="mb-2"><strong>Research interests:</strong></p>
+        <ul class="mb-0">
+          {% for interest in page.interests %}
+          <li>{{ interest }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Bio content from Markdown -->
+    <div class="mt-4">
+      {{ content }}
+    </div>
+
+    <!-- Publications by this team member -->
+    {% assign member_papers = site.posts | where_exp: "post", "post.authors contains page.name" %}
+    {% if member_papers.size > 0 %}
+    <div class="mt-5">
+      <h3 class="text-muted mb-3">Publications</h3>
+      {% for post in member_papers limit: 10 %}
+      <div class="mb-3">
+        <h6 class="mb-1"><a href="{{ post.url | relative_url }}" class="paper-title-link">{{ post.title }}</a></h6>
+        <p class="mb-0 text-muted small">{{ post.ref }}</p>
+      </div>
+      {% endfor %}
+      {% if member_papers.size > 10 %}
+      <p class="mt-3"><a href="{{ '/papers/' | relative_url }}" class="btn btn-outline-secondary btn-sm">View all publications</a></p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+  </div>
+</div>
