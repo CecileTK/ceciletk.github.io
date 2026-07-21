@@ -7,10 +7,11 @@ title: Home
   <div class="col-12 col-md-11 col-lg-11 col-xl-10">
     {% assign me = site.team | first %}
     {% assign home_content = site.home | first %}
-    <div class="row gx-4 align-items-start">
+    <div class="row gx-4 align-items-start profile-row">
       <div class="col-auto" style="max-width: 200px;">
+        <div class="profile-photo-links">
         {% if me.photo %}
-        <img src="{{ me.photo }}" class="img-fluid rounded mb-3" alt="{{ me.name }}" style="max-width: 150px;">
+        <img src="{{ me.photo }}" class="img-fluid rounded" alt="{{ me.name }}" style="max-width: 150px; flex-shrink: 0; margin-right: 16px; margin-bottom: 12px;">
         {% endif %}
 
         <div class="profile-links">
@@ -55,6 +56,7 @@ title: Home
           </p>
           {% endif %}
         </div>
+        </div>
       </div>
 
       <div class="col">
@@ -70,7 +72,7 @@ title: Home
 
 <div class="row justify-content-center mt-5">
   <div class="col-12 col-md-11 col-lg-11 col-xl-10">
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 pub-header">
       <h3 class="text-muted mb-0">Selected publications</h3>
       <a href="{{ '/papers/' | relative_url }}" class="btn btn-outline-secondary btn-sm">View all publications</a>
     </div>

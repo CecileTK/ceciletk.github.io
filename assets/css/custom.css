@@ -1,14 +1,15 @@
 /* Custom styles for academic website */
 
-/* Color variables */
+/* ── COLOR VARIABLES ── */
 :root {
-  --color-primary: #212529;     /* Black - main text and links */
-  --color-secondary: #6c757d;   /* Grey - muted text and borders */
-  --color-accent: #FF7217;      /* Orange - hover states and active elements */
-  --color-white: #ffffff;       /* White - backgrounds */
+  --color-primary: #212529;   /* Black - main text and links */
+  --color-secondary: #6c757d; /* Grey - muted text and borders */
+  --color-accent: #FF7217;    /* Orange - hover states and active elements */
+  --color-white: #ffffff;     /* White - backgrounds */
 }
 
-/* Global link color override */
+/* ── GLOBAL LINKS ── */
+/* Override Bootstrap's blue; all links are black with orange hover */
 a {
   color: var(--color-primary) !important;
   text-decoration: none !important;
@@ -19,71 +20,130 @@ a:hover {
   text-decoration: none !important;
 }
 
-/* Navigation active link */
+/* Active nav link */
 .nav-link.active {
   color: var(--color-accent) !important;
 }
 
-/* Paper title links */
-.paper-title-link {
-  color: var(--color-primary) !important;
-  text-decoration: none !important;
-}
-
-.paper-title-link:hover {
-  color: var(--color-accent) !important;
-  text-decoration: none !important;
-}
-
-/* All links in paper details (PDF, Supplement, DOI, Code) */
-.paper-links a {
-  color: var(--color-primary) !important;
-  text-decoration: none !important;
-  font-size: 1rem;
-}
-
-.paper-links a:hover {
-  color: var(--color-accent) !important;
-  text-decoration: none !important;
-}
-
-/* Ensure images don't overlap with text */
-.paper-image-col {
-  flex-shrink: 0; /* Prevent image column from shrinking */
-  min-width: 120px; /* Minimum width for image column */
-  margin-right: 20px; /* Minimum margin between image and text */
-}
-
-.paper-content-col {
-  flex-grow: 1; /* Allow text column to grow */
-  min-width: 0; /* Allow text to wrap properly */
-}
-
-/* Button hover effect */
-.btn-outline-secondary:hover {
-  background-color: var(--color-accent) !important;
-  border-color: var(--color-accent) !important;
-  color: var(--color-white) !important;
-}
-
-/* Homepage profile links */
-.profile-links a {
-  color: var(--color-primary) !important;
-  text-decoration: none !important;
-}
-
-.profile-links a:hover {
-  color: var(--color-accent) !important;
-  text-decoration: none !important;
-}
-
-/* Links in bio content (but not buttons) */
+/* Bio links get an underline to distinguish them from nav-style links */
 .bio-content a:not(.btn) {
-  color: var(--color-primary) !important;
   text-decoration: underline !important;
 }
 
 .bio-content a:not(.btn):hover {
   color: var(--color-accent) !important;
   text-decoration: underline !important;
+}
+
+/* Paper detail page links (PDF, DOI, Code…) */
+.paper-links a {
+  font-size: 1rem;
+}
+
+/* ── BUTTONS ── */
+.btn-outline-secondary:hover {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-white) !important;
+}
+
+/* ── MOBILE (< 768px) ── */
+@media (max-width: 767px) {
+
+  /* ── Home page ── */
+
+  /* Stack photo+links block above bio text */
+  .profile-row {
+    flex-direction: column;
+  }
+
+  .profile-row > .col-auto {
+    max-width: 100% !important;
+  }
+
+  /* Photo and links sit side by side within that block */
+  .profile-photo-links {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* Shrink photo slightly to give links more room */
+  .profile-photo-links img {
+    max-width: 135px !important;
+    margin-right: 8px !important;
+  }
+
+  /* Keep "Selected publications" heading and button on one line */
+  .pub-header {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .pub-header h3 {
+    font-size: 1.4rem;
+  }
+
+  /* Button wraps its text, minimal padding */
+  .pub-header .btn {
+    width: fit-content;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* ── Publications list ── */
+
+  /* Hide blank year-indent spacer so thumbnail sits at the left edge */
+  .pub-spacer-col {
+    display: none;
+  }
+
+  /* Thumbnail column: fixed width with image capped inside */
+  .pub-thumb-col {
+    width: 70px !important;
+  }
+
+  .pub-thumb-col img {
+    max-width: 60px !important;
+  }
+
+  /* Year column: wide enough for a 4-digit year without overlapping the HR */
+  .pub-year-row .pub-year-col {
+    width: 56px !important;
+  }
+
+  .pub-year-row h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Slightly smaller text for paper titles and citations */
+  .pub-paper-row h6 {
+    font-size: 0.85rem;
+  }
+
+  .pub-paper-row p {
+    font-size: 0.78rem;
+  }
+
+  /* ── Paper detail page ── */
+
+  /* Smaller title and authors (shown in the mobile-only block at the top) */
+  .paper-header-mobile h3 {
+    font-size: 1.2rem;
+  }
+
+  .paper-header-mobile .text-muted {
+    font-size: 0.85rem;
+  }
+
+  /* Shrink thumbnail column to match the smaller image */
+  .paper-thumb-mobile {
+    width: 100px !important;
+  }
+
+  .paper-thumb-mobile img {
+    max-width: 90px !important;
+  }
 }
