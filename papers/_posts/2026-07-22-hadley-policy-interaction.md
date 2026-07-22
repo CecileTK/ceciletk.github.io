@@ -6,6 +6,6 @@ authors: Hadley L, Ben Miled S, Clapham HE, Djaafara BA, Dyson L, Funk S, Gog JR
 year: 2026
 ref: Hadley et al. 2026. Communications health. 
 #journal: Communications health
-pdf: /pdfs/papers/haldey-interface-policy.pdf
+pdf: /pdfs/papers/hadley-interface-policy.pdf
 doi: 0.1038/s44528-026-00009-2
 ---
