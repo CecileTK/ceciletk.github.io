@@ -9,3 +9,4 @@ journal: Communications Health
 pdf: /pdfs/papers/hadley-interface-policy.pdf
 doi: 0.1038/s44528-026-00009-2
 ---
+The COVID-19 crisis required scientists worldwide to contribute to complex, hectic, and unfamiliar governmental decision-processes. In this Perspective, we reflect on this intense interaction between science and health policy for pandemic response, drawing from the experience of infectious disease modellers across the world. We highlight the diversity of actors and interests in government, aiming to demystify the elusive ‘policy makers’. We present a general taxonomy to help research scientists more effectively support evidence-based policy. We stress the importance of building and maintaining relationships appropriate to the diverse pool of government actors. Not recognising this diversity may lead to miscommunication and reduce the positive impacts of scientific evidence for public policy in crisis and non-crisis situations.
