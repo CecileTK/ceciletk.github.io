@@ -3,7 +3,7 @@ name: "Cécile TRAN KIEM"
 photo: /images/team/trankiem-cecile.png
 
 # Links
-email: "ctrankie@fredhutch.org"
+email: "cecile.tran-kiem18@imperial.ac.uk"
 google_scholar: "https://scholar.google.com/citations?user=5iSE3cwAAAAJ"
 orcid: "https://orcid.org/0000-0003-0563-8428"
 github: "https://github.com/CecileTK"
