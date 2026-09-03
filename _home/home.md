@@ -1,9 +1,9 @@
 ---
 ---
 
-I am an infectious disease modeller and genomic epidemiologist based in Seattle, WA. 
-I'm currently finishing a postdoc in the [Bedford Lab](http://bedford.io) at [Fred Hutchinson Cancer Center](https://www.fredhutch.org).
-I will move to London at the end of the summer to start a Wellcome Trust Early Career Award in the Department of Infectious Disease Epidemiology at Imperial College London.
+I am an infectious disease modeller and genomic epidemiologist based in London, UK.
+I am a Research Fellow in the Department of Infectious Disease Epidemiology at Imperial College London funded by a Wellcome Trust Early Career Award.
+Previously, I completed a PhD in the Mathematical Modelling of Infectious Diseases [unit](https://research.pasteur.fr/en/team/mathematical-modelling-of-infectious-diseases/) at [Institut Pasteur](https://www.pasteur.fr/en) (Paris) and a postdoc  in the [Bedford Lab](http://bedford.io) at [Fred Hutchinson Cancer Center](https://www.fredhutch.org) (Seattle).
 
 My research centres on developing mathematical and statistical methods to **understand how pathogens spread and to support their control**, using epidemiological, genomic and behavioural data. 
 In particular, I have focused on characterising **how transmission flows between groups** such as ages, geographies and vaccination status, and using this information to evaluate **targeted interventions**.
