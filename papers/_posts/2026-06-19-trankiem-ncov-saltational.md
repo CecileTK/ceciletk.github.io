@@ -10,5 +10,6 @@ pdf: /pdfs/papers/trankiem-ncov-saltational.pdf
 #supplement: /pdfs/supplements/trankiem-ncov-saltational-supplement.pdf
 doi: 10.64898/2026.06.18.733214
 code: https://github.com/blab/ncov-saltational/
+featured: true
 ---
 SARS-CoV-2 evolution is characterized by gradual mutation accumulation but has been punctuated by rare yet impactful highly mutated variants. Whether such saltational jumps are a broad feature of SARS-CoV-2 evolution or rare anomalies remains unclear. We systematically investigate SARS-CoV-2 saltational evolution by developing a scalable framework to detect saltational events from 4.4 million high-quality viral genomes. Saltational events occurred at low but detectable rates during the pandemic and post-pandemic periods and across geographies. Their mutational signature closely matches that seen in persistent human infections but is inconsistent with the signatures of mink or deer infections. This points to persistent infection, rather than reverse zoonosis, as their primary source. While most saltational events lack evidence of onward transmission, those that do tend to carry mutations found in successful clades. Our work demonstrates that the emergence of highly mutated SARS-CoV-2 variants reflects a recurrent evolutionary process, with implications for preparedness.
