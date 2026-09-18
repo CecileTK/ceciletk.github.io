@@ -2,7 +2,7 @@
 layout: paper
 title: "Underdetected dispersal and extensive local transmission drove the 2022 mpox epidemic"
 image: /images/papers/paredes-mpox-phylodynamics.png
-authors: Paredes MI, Ahmed N, Figgins M, Colizza V, Lemey P, McCrone JT, Tran-Kiem C, Bedford T
+authors: Paredes MI, Ahmed N, Figgins M, Colizza V, Lemey P, McCrone JT, Müller N, Tran-Kiem C, Bedford T
 year: 2024
 ref: Paredes et al. 2024. Cell.
 journal: Cell
